@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>E-Commerce</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
+integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" 
+crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" 
+integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" 
+crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" type="text/css" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+</head>
+<body class='backend'>
+    <nav class="nav nav_top">
+    <div class ="logo">
+       <a href="index.html" ><img src="Vishwakarma_Institute_of_Technology.png" width="90"hight="auto"></a>
+    </div>
+    <div class="vit" >
+        <center> <b><h1>The_Book_Cycle</h1></b></center>
+ 
+     </div>
+    <div class="nav_side">
+    <a href="about.html">About Us</a>
+    <a href="service.html">Service</a>
+    <a href="contact.html">contact</a>
+    <a href="">LogIn/Register</a>
+
+    </div>
+  </nav>
+
+  <div class="products_1" style="padding-top: 100px;">
+    
+    <h2 style="background-color:yellowgreen ;">Electronic and Telecommunication</h2>
+    <div class="submitions">
+
+
+    </div>
+          <div class="product_container" style="padding-bottom: 50px;">
+              <div class="item">
+                  <div class="item_image" >
+                     <img src="Brain Hcaks.jpeg"width="100%" height="100%">
+                  </div>
+                  <div class="item_container">
+                      <h3>ATOMIC HABITS </h3>
+                     <h5><p>Get Flat 40% Off On 100 Bestsellers.<br> </h5> 
+                        An atomic habit is a regular practice or routine that
+                         is not only small and easy to do but is also the source
+                          of incredible power; a component of the system of 
+                          compound growth</p>    
+                  </div>
+              </div>
+          </div>
+
+          
+  </div>
+  
+<div class="feed_1">
+    <h3>Fill the details </h3>
+    <div class="feed_form">
+        <form name="The_book_cycle_database"method="post" > 
+            <div>Name</div>
+            <input type="text" name="Full_name" placeholder="Name" size="100px" ><br>
+            <div>Email</div>
+            <input type="email" name="Email_ID" placeholder="Email ID"size="100px" ><br>
+            <div>PRN</div>
+            <input type="number" name="PRN" placeholder="Contact Number" ><br>
+            <div>Contact Number</div>
+            <input type="number" name="Contact_Number" placeholder="Contact Number" ><br>
+            <button type="submit" >Submit</button>
+            <!-- <div>BOOK</div> -->
+           <input type="hidden" id="" name="BOOK" value="brain_hackes"><br><br>
+         </form>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxpQzndnXlDsHxCKmpZ0Z1msUeflGMidEWnFCeZbZ2yRlLwjoA41NpESpH93qilaaqv/exec'
+            const form = document.forms['The_book_cycle_database']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("The Book Cycle"))
+                .catch(error => console.error('Error!', error.message))
+            })
+</script>
+
+</body>
+</html>
